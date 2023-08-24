@@ -1,5 +1,5 @@
 // Definimos la función para cargar la lista desde el almacenamiento local y mostrarla en la página
-function cargarLista() {
+function cargarListado() {
     const listaGuardada = localStorage.getItem('listaItems'); // Obtiene la lista guardada del almacenamiento local
     if (listaGuardada) {
       document.getElementById('contenedor').innerHTML = listaGuardada; // Muestra la lista en el contenedor si está presente
@@ -7,7 +7,7 @@ function cargarLista() {
   }
   
   // Definimos la función para guardar la lista en el almacenamiento local
-  function guardarLista() {
+  function guardarListado() {
     const listaItems = document.getElementById('contenedor').innerHTML; // Obtiene el contenido HTML del contenedor
     localStorage.setItem('listaItems', listaItems); // Guarda el contenido HTML como 'listaItems' en el almacenamiento local
   }
@@ -26,15 +26,15 @@ function cargarLista() {
   }
   
   // Definimos la función para limpiar la lista y el almacenamiento local
-  function limpiarLista() {
+  function limpiarListado() {
     document.getElementById('contenedor').innerHTML = ''; // Limpia el contenido del contenedor (elimina la lista)
     localStorage.removeItem('listaItems'); // Elimina la entrada 'listaItems' del almacenamiento local
   }
   
   // Se Carga el DOM al cargar la página y llamamos a las funciones al hacer clic en los botones Agregar o Limpiar 
   document.addEventListener('DOMContentLoaded', () => {
-    cargarLista(); // Cargamos y muestra la lista almacenada al cargar la página
+    cargarListado(); // Cargamos y muestra la lista almacenada al cargar la página
     document.getElementById('agregar').addEventListener('click', agregarItem); // Agregamos evento clic al botón 'Agregar'
-    document.getElementById('limpiar').addEventListener('click', limpiarLista); // Agregamos evento clic al botón 'Limpiar'
+    document.getElementById('limpiar').addEventListener('click', limpiarListado); // Agregamos evento clic al botón 'Limpiar'
   });
   
