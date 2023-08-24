@@ -11,7 +11,7 @@ function cargarListado() {
     const listaItems = document.getElementById('contenedor').innerHTML; // Obtiene el contenido HTML del contenedor
     localStorage.setItem('listaItems', listaItems); // Guarda el contenido HTML como 'listaItems' en el almacenamiento local
   }
-  
+  //Asumimos que deberiamos de utilizar boostrap al crear el nuevo item sin embargo desconocemos como llamar el framework
   // Definimos la función para agregar un nuevo ítem a la lista
   function agregarItem() {
     const nuevoItem = document.getElementById('item').value.trim(); // Obtiene el nuevo ítem del input y elimina espacios en blanco
